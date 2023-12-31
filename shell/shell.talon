@@ -2,9 +2,18 @@ app: alacritty
 
 -
 
-(cd | go): "cd "
-(ls | list): "ls "
+[shell] (cd | go): "cd "
+[shell] (ls | list): "ls "
 
-(control c | cancel): key(ctrl-c)
-(copy): key(ctrl-shift-c)
-(paste): key(ctrl-shift-v)
+[shell] (search | AG): "ag "
+[shell] (search files | AG files): "ag -g "
+
+[shell] (control c | cancel): key(ctrl-c)
+[shell] (copy): key(ctrl-shift-c)
+[shell] (paste): key(ctrl-shift-v)
+
+[shell] (RM | remove): "rm "
+[shell] (RM | remove) force: "rm -rf "
+
+[shell] updir: "../"
+[shell] currdir: "./"

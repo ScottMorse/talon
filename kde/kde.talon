@@ -1,18 +1,19 @@
 
-(focus | foke) (l | left): key(alt-super-left)
-(focus | foke) (r | right): key(alt-super-right)
-(focus | foke) (prev | previous | back | up): key(super-k)
-(focus | foke) (next | down): key(super-shift-l)
+[focus | foke] (l | left): key(alt-super-left)
+[focus | foke] (r | right): key(alt-super-right)
+[focus | foke] (prev | previous | back | up): key(super-k)
+[focus | foke] (next | down): key(super-shift-l)
 
-(win | window) (screen | monitor | display) (prev | previous | left | l): key(super-shift-left)
-(win | window) (prev | previous | left | up | l): key(super-shift-O)
-(win | window) (next | right | down | r): key(super-shift-i)
-(win | window) (screen | monitor | display) (next | right | r): key(super-shift-right)
+[move] (win | window) [move] (screen | monitor | display) (prev | previous | left | l): key(super-shift-left)
+[move] (win | window) [move] (prev | previous | left | up | l): key(super-shift-O)
+[move] (win | window) [move] (next | right | down | r): key(super-shift-i)
+[move] (win | window) [move] (screen | monitor | display) (next | right | r): key(super-shift-right)
 
 [win | window] grow left: key(super-shift-7)
 [win | window] grow down: key(super-shift-8)
 [win | window] grow up: key(super-shift-9)
 [win | window] grow right: key(super-shift--)
+([win | window] close | close [win | window]): key(alt-f4)
 
 [focus | foke] (screen | monitor | display) left: key(alt-super-shift-2)
 [focus | foke] (screen | monitor | display) middle: key(alt-super-shift-1)
@@ -38,4 +39,6 @@ recon: key(alt-super-shift-r)
 
 veb: key(alt-super-shift-v)
 
+[open] settings: key(super-f21)
 
+(browser | brave): key(super-alt-shift-b)

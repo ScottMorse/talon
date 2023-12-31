@@ -11,7 +11,7 @@ app: alacritty
     insert(digits)
     key(enter)
 
-[t] mux (start | open):
+[t] mux (init | initialize | start | open):
     "tmux"
     key(enter)
 
