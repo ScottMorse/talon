@@ -14,6 +14,3 @@ app: alacritty
 
 [shell] (RM | remove): "rm "
 [shell] (RM | remove) force: "rm -rf "
-
-[shell] updir: "../"
-[shell] currdir: "./"

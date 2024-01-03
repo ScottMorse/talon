@@ -1,4 +1,5 @@
 app: not(alacritty)
+os: linux
 
 -
 

@@ -14,9 +14,7 @@ app: code
 
 [code] go (bottom | end):
     key(escape)
-    key(g)
-    key(g)
+    key(G)
 
 [code] (recent | recents):
     key(tab:6)
-

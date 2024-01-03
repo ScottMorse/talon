@@ -1,3 +1,6 @@
+os: linux
+
+-
 
 [focus | foke] (l | left): key(alt-super-left)
 [focus | foke] (r | right): key(alt-super-right)
