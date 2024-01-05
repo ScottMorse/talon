@@ -1,14 +1,13 @@
 import os
 import re
 import json5
+import platform
 
-with open(os.path.expanduser("~/.config/Code/User/keybindings.json"), "r") as f:
+with open(os.path.expanduser("~/Library/Application Support/Code/User/keybindings.json" if platform.system() == 'Darwin' else "~/.config/Code/User/keybindings.json"), "r") as f:
     key_bindings = json5.load(f)
-
 
 def format_key(key: str) -> str:
     return key.replace("+", "-").replace("meta", "super")
-
 
 def create_rule(
     key: str, code_command: str, talon_rule: str, name: str, require_prefix: bool

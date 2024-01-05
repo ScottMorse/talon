@@ -33,3 +33,4 @@ refresh: key(super-r)
 (new window | window new): key(super-n)
 [new] incognito: key(super-shift-n)
 
+(search | find): key(super-f)

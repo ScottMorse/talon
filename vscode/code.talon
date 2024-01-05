@@ -18,3 +18,5 @@ app: code
 
 [code] (recent | recents):
     key(tab:6)
+
+(new window | window new): key(super-shift-n)
