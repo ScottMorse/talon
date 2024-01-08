@@ -33,3 +33,6 @@ refresh: key(ctrl-r)
 (new window | window new): key(ctrl-n)
 [new] incognito: key(n)
 
+(open [link] | link [open]): key(enter)
+(open [link] | link [open]) (new tab | tab new): key(ctrl-shift-enter)
+

@@ -3,9 +3,9 @@ app: code
 
 -
 
-[code] go [line] <digits>:
+[code] (go [line | row] | [go] (line | row)) <user.number_string>:
     key(escape)
-    insert(digits)
+    insert(number_string)
     key(G)
 
 [code] go top:
@@ -19,4 +19,14 @@ app: code
 [code] (recent | recents):
     key(tab:6)
 
+[dot] tsx: ".tsx"
+
+[dot] ts: ".ts"
+
+[dot] js: ".js"
+
+[dot] json: ".json"
+
 (new window | window new): key(super-shift-n)
+
+pipe (separator | separate): " | "

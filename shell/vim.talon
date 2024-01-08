@@ -27,3 +27,7 @@ app: code
 [vim] replace:
     key(escape)
     ":%s/"
+
+[vim] append:
+    key(escape)
+    key(a)
