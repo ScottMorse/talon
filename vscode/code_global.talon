@@ -28,5 +28,8 @@ app: code
 [dot] json: ".json"
 
 (new window | window new): key(super-shift-n)
-
 pipe (separator | separate): " | "
+
+next [search | result | search result]: key(enter)
+previous [search | result | search result]: key(shift-enter)
+

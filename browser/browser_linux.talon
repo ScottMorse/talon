@@ -12,7 +12,10 @@ dev [tools] (prev | memory | mem | store | stored): key(ctrl-shift-i)
 
 (url | address | search bar): key(ctrl-l)
 
-search: key(ctrl-f)
+search [<phrase>]: 
+    key(ctrl-f)
+    sleep(0.11)
+    insert(phrase)
 
 refresh: key(ctrl-r)
 (refresh hard | hard refresh): key(ctrl-shift-r)
@@ -36,3 +39,7 @@ refresh: key(ctrl-r)
 (open [link] | link [open]): key(enter)
 (open [link] | link [open]) (new tab | tab new): key(ctrl-shift-enter)
 
+take [search | result | search result] [new] tab: 
+    key(escape)
+    sleep(0.1)
+    key(ctrl-shift-enter)

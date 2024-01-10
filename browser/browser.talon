@@ -16,3 +16,10 @@ duck google:
 duck google images:
     " !gi"
     key(enter)
+
+next [search | result | search result]: key(enter)
+previous [search | result | search result]: key(shift-enter)
+take [search | result | search result]: 
+    key(escape)
+    sleep(0.1)
+    key(enter)

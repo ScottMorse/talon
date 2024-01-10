@@ -29,8 +29,19 @@ refresh: key(super-r)
 (restore [tab | tabs] | [tab | tabs] restore): key(super-shift-t)
 (tab close | close tab): key(super-w)
 
-(new tab | tab new): key(super-t)
+((new | open) tab | tab (new | open)): key(super-t)
 (new window | window new): key(super-n)
 [new] incognito: key(super-shift-n)
 
-(search | find): key(super-f)
+search [<phrase>]: 
+    key(super-f)
+    sleep(0.1)
+    insert(phrase)
+
+take [search | result | search result] [new] tab: 
+    key(escape)
+    sleep(0.1)
+    key(super-shift-enter)
+
+(open [link] | link [open]): key(enter)
+(open [link] | link [open]) (new tab | tab new): key(super-shift-enter)

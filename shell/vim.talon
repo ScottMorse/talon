@@ -3,6 +3,14 @@ app: code
 
 -
 
+[vim] new line [down]:
+    key(escape)
+    key(o)
+    
+[vim] new line up:
+    key(escape)
+    key(O)
+
 [vim] [go] [line] <digits>:
     key(escape)
     insert(digits)
