@@ -82,3 +82,6 @@ redo: key(ctrl-shift-z)
 
 copy: key(ctrl-c)
 paste: key(ctrl-v)
+
+zoom [in]: key(ctrl-+)
+zoom out: key(ctrl--)

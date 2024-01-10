@@ -26,3 +26,6 @@ hide [app [window | win | windows]]: key(super-h)
 (close window | window close): key(super-w)
 
 [screen] lock: key(super-ctrl-q)
+
+zoom [in]: key(super-+)
+zoom out: key(super--)
