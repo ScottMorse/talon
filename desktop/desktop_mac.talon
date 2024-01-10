@@ -27,5 +27,11 @@ hide [app [window | win | windows]]: key(super-h)
 
 [screen] lock: key(super-ctrl-q)
 
+undo: key(super-z)
+redo: key(super-shift-z)
+
+menu bar: key(ctrl-f2)
+dock: key(ctrl-f3)
+
 zoom [in]: key(super-+)
 zoom out: key(super--)
