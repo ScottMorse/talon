@@ -10,10 +10,13 @@ os: linux
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(ctrl-shift-c)
 dev [tools] (prev | memory | mem | store | stored): key(ctrl-shift-i)
 
-(url | address | search bar): key(ctrl-l)
-
 search [<phrase>]: 
     key(ctrl-f)
+    sleep(0.11)
+    insert(phrase)
+
+(url | address | search bar) [<phrase>]: 
+    key(ctrl-l)
     sleep(0.11)
     insert(phrase)
 
@@ -34,7 +37,7 @@ refresh: key(ctrl-r)
 
 (new tab | tab new): key(ctrl-t)
 (new window | window new): key(ctrl-n)
-[new] incognito: key(n)
+[new] incognito: key(ctrl-shift-n)
 
 (open [link] | link [open]): key(enter)
 (open [link] | link [open]) (new tab | tab new): key(ctrl-shift-enter)

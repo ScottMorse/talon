@@ -7,18 +7,18 @@ os: linux
 (focus | foke) (prev | previous | back | up): key(super-k)
 (focus | foke) (next | down): key(super-shift-l)
 
-[move] (win | window | app | move) [move] (screen | monitor | display) left: key(super-shift-left)
-[move] (win | window | app | move) [move] (screen | monitor | display) middle: key(super-shift-up)
-[move] (win | window | app | move) [move] (screen | monitor | display) right: key(super-shift-right)
+[move] (window | app | move) [move] (screen | monitor | display) left: key(super-shift-left)
+[move] (window | app | move) [move] (screen | monitor | display) middle: key(super-shift-up)
+[move] (window | app | move) [move] (screen | monitor | display) right: key(super-shift-right)
 
-[move] (win | window | app) [move] (prev | previous | left | up): key(super-shift-O)
-[move] (win | window | app) [move] (next | right | down): key(super-shift-i)
+[move] (window | app) [move] (prev | previous | left | up): key(super-shift-O)
+[move] (window | app) [move] (next | right | down): key(super-shift-i)
 
-[win | window | app] grow left: key(super-shift-7)
-[win | window | app] grow down: key(super-shift-8)
-[win | window | app] grow up: key(super-shift-9)
-[win | window | app] grow right: key(super-shift--)
-((win | window | app) close | close (win | window | app)): key(alt-f4)
+[window | app] grow left: key(super-shift-7)
+[window | app] grow down: key(super-shift-8)
+[window | app] grow up: key(super-shift-9)
+[window | app] grow right: key(super-shift--)
+((window | app) close | close (window | app)): key(alt-f4)
 
 [focus | foke] (screen | monitor | display) left: key(alt-super-shift-2)
 [focus | foke] (screen | monitor | display) middle: key(alt-super-shift-1)
@@ -36,32 +36,48 @@ tile main: key(alt-super-shift-/)
 (desk | desktop) five: key(ctrl-f5)
 (desk | desktop) six: key(ctrl-f6)
 (desk | desktop) seven: key(ctrl-f7)
-(desk | desktop) eight: key(ctrl-f8)
+(desk | desktop) (eight | ocho.): key(ctrl-f8)
 
-[move] (win | window | app) [move] (desk | desktop) one: 
+[move] (window | app) [move] (desk | desktop) one: 
     key(ctrl-f9)
+    sleep(0.1)
     key(ctrl-f1)
-[move] (win | window | app) [move] (desk | desktop) two: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) two: 
     key(ctrl-f10)
+    sleep(0.1)
     key(ctrl-f2)
-[move] (win | window | app) [move] (desk | desktop) three: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) three: 
     key(ctrl-f11)
+    sleep(0.1)
     key(ctrl-f3)
-[move] (win | window | app) [move] (desk | desktop) four: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) four: 
     key(ctrl-f12)
+    sleep(0.1)
     key(ctrl-f4)
-[move] (win | window | app) [move] (desk | desktop) five: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) five: 
     key(ctrl-f13)
+    sleep(0.1)
     key(ctrl-f5)
-[move] (win | window | app) [move] (desk | desktop) six: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) six: 
     key(ctrl-f14)
+    sleep(0.1)
     key(ctrl-f6)
-[move] (win | window | app) [move] (desk | desktop) seven: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) seven: 
     key(ctrl-f15) 
+    sleep(0.1)
     key(ctrl-f7)
-[move] (win | window | app) [move] (desk | desktop) eight: 
+    key(alt-super-shift-1)
+[move] (window | app) [move] (desk | desktop) (eight | ocho.): 
     key(ctrl-f16) 
+    sleep(0.1)
     key(ctrl-f8)
+    key(alt-super-shift-1)
 
 terminal: key(super-5)
 

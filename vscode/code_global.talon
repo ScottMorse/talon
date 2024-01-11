@@ -33,3 +33,11 @@ pipe (separator | separate): " | "
 next [search | result | search result]: key(enter)
 previous [search | result | search result]: key(shift-enter)
 
+(talent | talon) key [short]:
+    "key()"
+    key(left)
+
+(talent | talon) key (long):
+
+    ": key()"
+    key(left)

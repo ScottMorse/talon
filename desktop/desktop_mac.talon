@@ -19,7 +19,7 @@ app window (prev | previous | back | cycle [previous | prev | back]): key(super-
 
 force quit: key(option-super-escape)
 
-hide [app [window | win | windows]]: key(super-h)
+hide [app [window | windows]]: key(super-h)
 
 (full screen | fullscreen): key(super-ctrl-f)
 
