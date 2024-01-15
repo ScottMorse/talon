@@ -10,12 +10,12 @@ os: linux
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(ctrl-shift-c)
 dev [tools] (prev | memory | mem | store | stored): key(ctrl-shift-i)
 
-search [<phrase>]: 
+^search [<phrase>]: 
     key(ctrl-f)
     sleep(0.11)
     insert(phrase)
 
-(url | address | search bar) [<phrase>]: 
+^(url | address | search bar) [<phrase>]: 
     key(ctrl-l)
     sleep(0.11)
     insert(phrase)

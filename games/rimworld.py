@@ -25,18 +25,20 @@ def direction_input(m) -> Dict[str, bool]:
     }
 
 
-@mod.capture(rule="zoom ([in] | out)")
-def zoom_input(m) -> str:
+@mod.capture(rule="zoom [way] ([in] | out)")
+def zoom_input(m) -> Dict[str, bool]:
     """
     Matches on zoom in or zoom out.
     """
-    return "out" if "out" in m else "in"
+    return {"direction": "out" if "out" in m else "in",
+            "way": "way" in m}
 
 
 mod.list("distance_input", desc="distance to move")
 
 DISTANCE_CONFIG = {
-    "tiny": {"time": "100ms"},
+    "micro": {"time": "20ms"},
+    "tiny": {"time": "150ms"},
     "short": {
         "time": "300ms",
     },
@@ -54,10 +56,10 @@ DISTANCE_CONFIG = {
 ctx.lists["self.distance_input"] = {key: key for key in DISTANCE_CONFIG.keys()}
 
 SPEED_CONFIG = {
-    "normal": {"key": "1"},
-    "fast": {"key": "2"},
+    "slow": {"key": "1"},
+    "normal": {"key": "2"},
+    "medium": {"key": "2"},
     "faster": {"key": "3"},
-    "fastest": {"key": "4"},
 }
 
 mod.list("speed_input", desc="speed to set")
@@ -99,7 +101,8 @@ class GameActions:
         """
         Zooms in or out.
         """
-        actions.key("+" if zoom == "in" else "-")
+        for _ in range(0, 10 if zoom["way"] else 1):
+            actions.key("+" if zoom["direction"] == "in" else "-")
 
     def speed(speed: str):
         """

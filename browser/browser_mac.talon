@@ -12,7 +12,10 @@ os: mac
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(super-alt-c)
 dev [tools] (prev | memory | mem | store | stored): key(super-alt-i)
 
-url: key(super-l)
+^(url | address | search bar) [<phrase>]: 
+    key(super-l)
+    sleep(0.11)
+    insert(phrase)
 
 refresh: key(super-r)
 (refresh hard | hard refresh): key(super-shift-r)
@@ -33,7 +36,7 @@ refresh: key(super-r)
 (new window | window new): key(super-n)
 [new] incognito: key(super-shift-n)
 
-search [<phrase>]: 
+^search [<phrase>]: 
     key(super-f)
     sleep(0.1)
     insert(phrase)

@@ -2,8 +2,11 @@ mode: user.rimworld
 
 -
 
-<user.direction_input>: 
+(go | hold) <user.direction_input>: 
     user.direction_keydown(user.direction_input)
+
+<user.direction_input> {user.distance_input}:
+    user.direction_move_by_distance(user.direction_input, user.distance_input)
 
 {user.distance_input} <user.direction_input>:
     user.direction_move_by_distance(user.direction_input, user.distance_input)
@@ -31,7 +34,7 @@ room stats: "G"
 beauty stats: "T"
 inspector: key(alt)
 
-(architect): key(f11)
+(architect | arc): key(tab)
 work: key(f1)
 schedule: key(f2)
 assign: key(f3)
