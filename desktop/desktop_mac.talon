@@ -30,6 +30,9 @@ hide [app [window | windows]]: key(super-h)
 undo: key(super-z)
 redo: key(super-shift-z)
 
+copy: key(super-c)
+paste: key(super-v)
+
 menu bar: key(ctrl-f2)
 dock: key(ctrl-f3)
 

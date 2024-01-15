@@ -2,6 +2,8 @@ os: linux
 
 -
 
+# TODO use lists at least in python for "app | window" etc.
+
 (focus | foke) (left): key(alt-super-left)
 (focus | foke) (right): key(alt-super-right)
 (focus | foke) (prev | previous | back | up): key(super-k)
@@ -10,6 +12,7 @@ os: linux
 [move] (window | app | move) [move] (screen | monitor | display) left: key(super-shift-left)
 [move] (window | app | move) [move] (screen | monitor | display) middle: key(super-shift-up)
 [move] (window | app | move) [move] (screen | monitor | display) right: key(super-shift-right)
+[move] (window | app | move) [move] (screen | monitor | display) TV: key(super-shift-down)
 
 [move] (window | app) [move] (prev | previous | left | up): key(super-shift-O)
 [move] (window | app) [move] (next | right | down): key(super-shift-i)
@@ -23,6 +26,7 @@ os: linux
 [focus | foke] (screen | monitor | display) left: key(alt-super-shift-2)
 [focus | foke] (screen | monitor | display) middle: key(alt-super-shift-1)
 [focus | foke] (screen | monitor | display) right: key(alt-super-shift-3)
+[focus | foke] (screen | monitor | display) TV: key(alt-super-shift-4)
 
 tile (new | increment): key(alt-super-shift-y)
 tile (delete | close | decrement): key(alt-super-shift-y)
@@ -36,7 +40,7 @@ tile main: key(alt-super-shift-/)
 (desk | desktop) five: key(ctrl-f5)
 (desk | desktop) six: key(ctrl-f6)
 (desk | desktop) seven: key(ctrl-f7)
-(desk | desktop) (eight | ocho.): key(ctrl-f8)
+(desk | desktop) (eight | ocho): key(ctrl-f8)
 
 [move] (window | app) [move] (desk | desktop) one: 
     key(ctrl-f9)
@@ -73,7 +77,7 @@ tile main: key(alt-super-shift-/)
     sleep(0.1)
     key(ctrl-f7)
     key(alt-super-shift-1)
-[move] (window | app) [move] (desk | desktop) (eight | ocho.): 
+[move] (window | app) [move] (desk | desktop) (eight | ocho): 
     key(ctrl-f16) 
     sleep(0.1)
     key(ctrl-f8)

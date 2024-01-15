@@ -16,7 +16,7 @@ app: code
     insert(digits)
     key(G)
 
-[vim] [go] (top | way up):
+[vim] go (top | way up):
     key(escape)
     key(g:2)
 
@@ -26,7 +26,7 @@ app: code
 
 [vim] [go] (bottom | end | way down):
     key(escape)
-    key(i)
+    key(G)
 
 [vim] visual:
     key(escape)
@@ -39,3 +39,23 @@ app: code
 [vim] append:
     key(escape)
     key(a)
+
+[vim] save:
+    key(escape)
+    ":w"
+    key(enter)
+
+[vim] quit:
+    key(escape)
+    ":q"
+    key(enter)
+
+[vim] force quit:
+    key(escape)
+    ":q!"
+    key(enter)
+
+[vim] force save quit:
+    key(escape)
+    ":wq!"
+    key(enter)

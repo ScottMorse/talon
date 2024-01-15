@@ -3,20 +3,20 @@ app: code
 
 -
 
-[code] (go [line | row] | [go] (line | row)) <user.number_string>:
+go [line] <user.number_string>:
     key(escape)
     insert(number_string)
     key(G)
 
-[code] go top:
+go top:
     key(escape)
     key(G)
 
-[code] go (bottom | end):
+go (bottom | end):
     key(escape)
     key(G)
 
-[code] (recent | recents):
+(recent | recents):
     key(tab:6)
 
 [dot] tsx: ".tsx"
@@ -24,6 +24,10 @@ app: code
 [dot] ts: ".ts"
 
 [dot] js: ".js"
+
+[dot] py: ".py"
+
+dot talon: ".talon"
 
 [dot] json: ".json"
 
@@ -41,3 +45,26 @@ previous [search | result | search result]: key(shift-enter)
 
     ": key()"
     key(left)
+
+
+^command [<phrase>]: 
+    user.vscode("workbench.action.showCommands")
+    sleep(0.1)
+    insert(phrase)
+
+^open [<phrase>]: 
+    user.vscode("workbench.action.quickOpen")
+    sleep(0.1)
+    insert(phrase)
+
+^search [<phrase>]: 
+    user.vscode("actions.find")
+    sleep(0.1)
+    insert(phrase)
+
+^(replace [all | every | multi file] | search (all | every | multi file)) [<phrase>]:
+    user.vscode("workbench.action.replacementFiles")
+    sleep(0.1)
+    insert(phrase)
+    
+    

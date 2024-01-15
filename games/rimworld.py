@@ -1,7 +1,11 @@
 from typing import Dict
-from talon import Module, actions
+from talon import Module, actions, Context
 
 mod = Module()
+
+ctx = Context()
+
+mod.mode("rimworld", "Mode for playing Rimworld")
 
 
 @mod.capture(
@@ -21,14 +25,58 @@ def direction_input(m) -> Dict[str, bool]:
     }
 
 
+@mod.capture(rule="zoom ([in] | out)")
+def zoom_input(m) -> str:
+    """
+    Matches on zoom in or zoom out.
+    """
+    return "out" if "out" in m else "in"
+
+
+mod.list("distance_input", desc="distance to move")
+
+DISTANCE_CONFIG = {
+    "tiny": {"time": "100ms"},
+    "short": {
+        "time": "300ms",
+    },
+    "medium": {
+        "time": "700ms",
+    },
+    "long": {
+        "time": "1s",
+    },
+    "very long": {
+        "time": "2s",
+    },
+}
+
+ctx.lists["self.distance_input"] = {key: key for key in DISTANCE_CONFIG.keys()}
+
+SPEED_CONFIG = {
+    "normal": {"key": "1"},
+    "fast": {"key": "2"},
+    "faster": {"key": "3"},
+    "fastest": {"key": "4"},
+}
+
+mod.list("speed_input", desc="speed to set")
+
+ctx.lists["self.speed_input"] = {key: key for key in SPEED_CONFIG.keys()}
+
+
+@mod.capture(rule="[speed] {user.speed_input}")
+def speed_input(m) -> str:
+    """
+    Matches on a speed setting.
+    """
+    return m.speed_input
+
+
 @mod.action_class
 class GameActions:
     def direction_keydown(direction: Dict[str, bool]):
         "Holds down the keys corresponding to the given direction"
-
-        # Press all the indicated keys down, exploiting the fact
-        # that the key names in our dictionary match the arrow key
-        # names on the keyboard
         for key, pressed in direction.items():
             if pressed:
                 actions.key(f"{key}:down")
@@ -39,16 +87,22 @@ class GameActions:
             if pressed:
                 actions.key(f"{key}:up")
 
-    def direction_move(direction: Dict[str, bool]):
-        "Moves the character in the given direction"
-
+    def direction_move_by_distance(direction: Dict[str, bool], distance: str):
+        """
+        Moves the cursor in the given direction by the given distance.
+        """
         actions.user.direction_keydown(direction)
+        actions.sleep(DISTANCE_CONFIG[distance]["time"])
         actions.user.direction_keyup(direction)
 
-    # def direction_attack(direction: Dict[str, bool]):
-    #     "Makes the game character attack in the indicated direction"
+    def zoom(zoom: str):
+        """
+        Zooms in or out.
+        """
+        actions.key("+" if zoom == "in" else "-")
 
-    #     actions.user.direction_keydown(direction)
-    #     # Assume space is a common 'perform attack' key
-    #     actions.key("space")
-    #     actions.user.direction_keyup(direction)
+    def speed(speed: str):
+        """
+        Sets the game speed.
+        """
+        actions.key(SPEED_CONFIG[speed]["key"])
