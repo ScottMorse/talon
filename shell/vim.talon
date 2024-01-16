@@ -16,7 +16,7 @@ app: code
     insert(digits)
     key(G)
 
-[vim] go (top | way up):
+^[vim] go (top | way up):
     key(escape)
     key(g:2)
 

@@ -2,6 +2,8 @@ app: code
 
 -
 
+collapse [files | folders | explorer]: user.vscode("workbench.files.action.collapseExplorerFolders")
+
 comment [line]: user.vscode("editor.action.commentLine")
 
 save: user.vscode("workbench.action.files.save")
@@ -40,7 +42,7 @@ replace (all | multifile): user.vscode("workbench.action.replaceInFiles")
 [focus] explorer: user.vscode("workbench.view.explorer")
 [toggle] sidebar: user.vscode("workbench.action.toggleSidebarVisibility") 
 
-close all: user.vscode("workbench.action.closeAllEditors") 
+close (files | all [files]): user.vscode("workbench.action.closeAllEditors") 
 
 [go [to]] references: user.vscode("editor.action.goToReferences")
 

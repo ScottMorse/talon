@@ -10,9 +10,9 @@ os: mac
 
 spotlight: key(super-space)
 
-([apps | app] (previous | prev | cycle)) | ((previous | prev | cycle) (apps | app)): key(super-tab)
+((apps | app) (previous | prev | cycle)) | ((previous | prev | cycle) (apps | app)): key(super-tab)
 
-([apps | app] (next | forward | cycle (next | forward))) | ((next | forward | cycle (next | forward)) (apps | app)): key(super-tab)
+((apps | app) (next | forward | cycle (next | forward))) | ((next | forward | cycle (next | forward)) (apps | app)): key(super-tab)
 
 app window [next | forward | switch | cycle]: key(super-`)
 app window (prev | previous | back | cycle [previous | prev | back]): key(super-shift-`)
