@@ -3,22 +3,22 @@ app: code
 
 -
 
-CD [<phrase>]: 
+^CD [<phrase>]: 
     user.clear_shell_input()
     insert("cd ")
     user.insert_formatted(phrase, 'relative')
 
-(ls | list) [<phrase>]:
+^(ls | list) [<phrase>]:
     user.clear_shell_input()
     "ls "
     user.insert_formatted(phrase, 'relative')
 
-A G [<phrase>]: 
+^A G [<phrase>]: 
     user.clear_shell_input()
     "ag "
     insert(phrase)
 
-A G files [<phrase>]: 
+^A G files [<phrase>]: 
     user.clear_shell_input()
     "ag -g "
     user.insert_formatted(phrase, 'relative')
@@ -53,7 +53,11 @@ clear:
 
 {user.git_command} commit [<phrase>]:
     user.clear_shell_input()
-    insert("git commit -m \"{user.formatted_text(phrase, 'sentence')}\"")
+    insert("git commit -m \"")
+    insert(user.formatted_text(phrase or "", 'sentence'))
+    insert("\"")
+    key(escape)
+    key(i)
 
 {user.git_command} commit verify [<phrase>]:
     user.clear_shell_input()
