@@ -85,6 +85,14 @@ clear:
     user.clear_shell_input()
     "git reset "
 
+{user.git_command} reset soft:
+    user.clear_shell_input()
+    "git reset --soft "
+
+{user.git_command} reset hard:
+    user.clear_shell_input()
+    "git reset --hard "
+
 {user.git_command} rebase:
     user.clear_shell_input()
     "git rebase "
@@ -101,6 +109,10 @@ clear:
     user.clear_shell_input()
     "git pull "
 
+{user.git_command} pull rebase:
+    user.clear_shell_input()
+    "git pull --rebase "
+
 {user.git_command} checkout:
     user.clear_shell_input()
     "git checkout "
@@ -108,6 +120,10 @@ clear:
 {user.git_command} checkout branch:
     user.clear_shell_input()
     "git checkout -b "
+
+{user.git_command} (checkout dash [dash] | un checkout | (remove | delete) changes):
+    user.clear_shell_input()
+    "git checkout -- " 
 
 {user.git_command} diff:
     user.clear_shell_input()
