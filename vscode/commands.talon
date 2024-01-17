@@ -36,7 +36,7 @@ rename [file | dir | directory]: user.vscode("renameFile")
 command: user.vscode("workbench.action.showCommands")
 
 replace (all | multifile): user.vscode("workbench.action.replaceInFiles")
-^search (files | all | multifile): user.vscode("workbench.action.findInFiles")
+search (files | all | multifile): user.vscode("workbench.action.findInFiles")
 
 [toggle] shell: user.vscode("workbench.action.terminal.focus") 
 [focus] explorer: user.vscode("workbench.view.explorer")

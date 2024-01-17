@@ -12,10 +12,9 @@ os: mac
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(super-alt-c)
 dev [tools] (prev | memory | mem | store | stored): key(super-alt-i)
 
-^(url | address | search bar) [<phrase>]: 
+^(URL | address | search bar) <user.lucky_input>:
     key(super-l)
-    sleep(0.11)
-    insert(phrase)
+    user.insert_lucky_input(user.lucky_input)
 
 refresh: key(super-r)
 (refresh hard | hard refresh): key(super-shift-r)
@@ -36,12 +35,17 @@ refresh: key(super-r)
 (new window | window new): key(super-n)
 [new] incognito: key(super-shift-n)
 
-^search [<phrase>]: 
-    key(super-f)
-    sleep(0.1)
-    insert(phrase)
+search: key(super-f)
 
-take [search | result | search result] [new] tab: 
+^search <user.lucky_input> new tab:
+    key(super-f)
+    user.insert_browser_search_lucky_input(user.lucky_input, "super-shift-enter")
+
+^search <user.lucky_input>:
+    key(super-f)
+    user.insert_browser_search_lucky_input(user.lucky_input, "enter")
+
+^take [search | result | search result] [new] tab: 
     key(escape)
     sleep(0.1)
     key(super-shift-enter)

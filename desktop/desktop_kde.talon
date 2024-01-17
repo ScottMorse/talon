@@ -46,42 +46,34 @@ tile main: key(alt-super-shift-/)
     key(ctrl-f9)
     sleep(0.1)
     key(ctrl-f1)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) two: 
     key(ctrl-f10)
     sleep(0.1)
     key(ctrl-f2)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) three: 
     key(ctrl-f11)
     sleep(0.1)
     key(ctrl-f3)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) four: 
     key(ctrl-f12)
     sleep(0.1)
     key(ctrl-f4)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) five: 
     key(ctrl-f13)
     sleep(0.1)
     key(ctrl-f5)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) six: 
     key(ctrl-f14)
     sleep(0.1)
     key(ctrl-f6)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) seven: 
     key(ctrl-f15) 
     sleep(0.1)
     key(ctrl-f7)
-    key(alt-super-shift-1)
 [move] (window | app) [move] (desk | desktop) (eight | ocho): 
     key(ctrl-f16) 
     sleep(0.1)
     key(ctrl-f8)
-    key(alt-super-shift-1)
 
 terminal: key(super-5)
 

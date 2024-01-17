@@ -19,7 +19,8 @@ duck google images:
 
 next [search | result | search result]: key(enter)
 previous [search | result | search result]: key(shift-enter)
-take [search | result | search result]: 
+
+^take [search | result | search result]: 
     key(escape)
     sleep(0.1)
     key(enter)

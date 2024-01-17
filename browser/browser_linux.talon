@@ -10,15 +10,24 @@ os: linux
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(ctrl-shift-c)
 dev [tools] (prev | memory | mem | store | stored): key(ctrl-shift-i)
 
+search: key(super-f)
+
+^(search | take) <user.lucky_input> new tab:
+    key(ctrl-f)
+    user.insert_browser_search_lucky_input(user.lucky_input, "ctrl-shift-enter")
+
+^(search | take) <user.lucky_input>:
+    key(ctrl-f)
+    user.insert_browser_search_lucky_input(user.lucky_input, "enter")
+
 ^search [<phrase>]: 
     key(ctrl-f)
     sleep(0.11)
     insert(phrase)
 
-^(url | address | search bar) [<phrase>]: 
+^(URL | address | search bar) <user.lucky_input>:
     key(ctrl-l)
-    sleep(0.11)
-    insert(phrase)
+    user.insert_lucky_input(user.lucky_input)
 
 refresh: key(ctrl-r)
 (refresh hard | hard refresh): key(ctrl-shift-r)

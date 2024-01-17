@@ -19,52 +19,39 @@ go (bottom | end):
 (recent | recents):
     key(tab:6)
 
-[dot] tsx: ".tsx"
+dot tsx: ".tsx"
 
-[dot] ts: ".ts"
+dot ts: ".ts"
 
-[dot] js: ".js"
+dot js: ".js"
 
-[dot] py: ".py"
+dot py: ".py"
 
 dot talon: ".talon"
 
-[dot] json: ".json"
+dot jsn: ".json"
 
-(new window | window new): key(super-shift-n)
 pipe (separator | separate): " | "
 
 next [search | result | search result]: key(enter)
 previous [search | result | search result]: key(shift-enter)
 
-(talent | talon) key [short]:
-    "key()"
-    key(left)
-
-(talent | talon) key (long):
-
-    ": key()"
-    key(left)
-
-
-^command [<phrase>]: 
+^command <user.lucky_input>: 
     user.vscode("workbench.action.showCommands")
-    sleep(0.1)
-    insert(phrase)
+    user.insert_lucky_input(user.lucky_input)
 
-^open [<phrase>]: 
+^open <user.lucky_input>: 
     user.vscode("workbench.action.quickOpen")
-    sleep(0.1)
-    insert(phrase)
+    user.insert_lucky_input(user.lucky_input)
 
-^search [<phrase>]: 
+^search <phrase>: 
     user.vscode("actions.find")
-    sleep(0.1)
-    insert(phrase)
+    user.insert_delay(phrase)
 
-^(replace [all | every | multi file] | search (all | every | multi file)) [<phrase>]:
-    user.vscode("workbench.action.replacementFiles")
-    sleep(0.1)
-    insert(phrase)
-    
-    
+^search (files | all | multifile) <phrase>:
+    user.vscode("workbench.action.findInFiles")
+    user.insert_delay(phrase)
+
+^(replace [all | every | multi file] | search (all | every | multi file)) <user.lucky_input>:
+    .vscode("workbench.action.replaceInFiles")
+    user.insert_lucky_input(user.lucky_input)
