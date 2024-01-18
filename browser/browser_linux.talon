@@ -25,6 +25,8 @@ search: key(super-f)
     sleep(0.11)
     insert(phrase)
 
+(URL | address | search bar): key(ctrl-l)
+
 ^(URL | address | search bar) <user.lucky_input>:
     key(ctrl-l)
     user.insert_lucky_input(user.lucky_input)
@@ -55,3 +57,30 @@ take [search | result | search result] [new] tab:
     key(escape)
     sleep(0.1)
     key(ctrl-shift-enter)
+
+(jump | go) tab <number>: key('ctrl-{number}')
+
+(main | browser) menu: key(alt-f)
+
+toggle bookmarks: key(ctrl-shift-b)
+
+(manage bookmarks | bookmarks manage | bookmark manager): key(ctrl-shift-o)
+bookmark [all] tabs: key(ctrl-shift-d)
+
+[open] downloads: key(ctrl-j)
+
+task manager: key(shift-escape)
+
+[focus] toolbar: key(f10)
+
+(clear | delete) history: key(ctrl-shift-delete)
+
+profile: key(ctrl-shift-m)
+
+print: key(ctrl-p)
+
+open file: key(ctrl-o)
+
+fullscreen page: key(f11)
+
+view HTML: key(ctrl-u)

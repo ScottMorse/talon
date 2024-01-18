@@ -65,11 +65,19 @@ clear:
 
 {user.git_command} push: 
     user.clear_shell_input()
-    "git push"
+    "git push "
 
 {user.git_command} push verify: 
     user.clear_shell_input()
-    "git push --no-verify"
+    "git push --no-verify "
+
+{user.git_command} push force: 
+    user.clear_shell_input()
+    "git push -f "
+
+{user.git_command} push (force verify | verify force): 
+    user.clear_shell_input()
+    "git push -f --no-verify "
 
 {user.git_command} status: 
     user.clear_shell_input()
@@ -96,6 +104,26 @@ clear:
 {user.git_command} rebase:
     user.clear_shell_input()
     "git rebase "
+
+{user.git_command} rebase abort:
+    user.clear_shell_input()
+    "git rebase --abort"
+
+{user.git_command} rebase continue:
+    user.clear_shell_input()
+    "git rebase --continue"
+
+{user.git_command} rebase skip:
+    user.clear_shell_input()
+    "git rebase --skip"
+
+{user.git_command} merge:
+    user.clear_shell_input()
+    "git merge "
+
+{user.git_command} merge abort:
+    user.clear_shell_input()
+    "git merge --abort"
 
 {user.git_command} stash:
     user.clear_shell_input()

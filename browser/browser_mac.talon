@@ -12,6 +12,8 @@ os: mac
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(super-alt-c)
 dev [tools] (prev | memory | mem | store | stored): key(super-alt-i)
 
+(URL | address | search bar): key(super-l)
+
 ^(URL | address | search bar) <user.lucky_input>:
     key(super-l)
     user.insert_lucky_input(user.lucky_input)
@@ -52,3 +54,30 @@ search: key(super-f)
 
 (open [link] | link [open]): key(enter)
 (open [link] | link [open]) (new tab | tab new): key(super-shift-enter)
+
+(jump | go) tab <number>: key('super-{number}')
+
+# (main | browser) menu: key(alt-f) # unavailable?
+
+toggle bookmarks: key(super-shift-b)
+
+(manage bookmarks | bookmarks manage | bookmark manager): key(super-option-o)
+# bookmark [all] tabs: key(super-shift-d) # unavailable?
+
+[open] downloads: key(super-shift-j)
+
+# task manager: key(shift-escape) # unavailable?
+
+# [focus] toolbar: key(f10) # unavailable?
+
+(clear | delete) history: key(super-shift-delete)
+
+profile: key(super-shift-m)
+
+print: key(super-p)
+
+open file: key(super-o)
+
+fullscreen page: key(super-ctrl-f)
+
+view HTML: key(super-option-u)
