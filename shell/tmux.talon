@@ -1,4 +1,5 @@
 app: alacritty
+app: code
 
 -
 [t] mux kill <digits>:
