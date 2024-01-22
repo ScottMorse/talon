@@ -9,10 +9,10 @@ os: linux
 (focus | foke) (prev | previous | back | up): key(super-k)
 (focus | foke) (next | down): key(super-shift-l)
 
-[move] (window | app | move) [move] (screen | monitor | display) left: key(super-shift-left)
-[move] (window | app | move) [move] (screen | monitor | display) middle: key(super-shift-up)
-[move] (window | app | move) [move] (screen | monitor | display) right: key(super-shift-right)
-[move] (window | app | move) [move] (screen | monitor | display) TV: key(super-shift-down)
+[move] (window | app | move) [move] (screen | monitor | display) (left | one): key(super-shift-left)
+[move] (window | app | move) [move] (screen | monitor | display) (middle | two): key(super-shift-up)
+[move] (window | app | move) [move] (screen | monitor | display) (right | three): key(super-shift-right)
+[move] (window | app | move) [move] (screen | monitor | display) (TV | four): key(super-shift-down)
 
 [move] (window | app) [move] (prev | previous | left | up): key(super-shift-O)
 [move] (window | app) [move] (next | right | down): key(super-shift-i)
@@ -23,10 +23,10 @@ os: linux
 [window | app] grow right: key(super-shift--)
 ((window | app) close | close (window | app)): key(alt-f4)
 
-[focus | foke] (screen | monitor | display) left: key(alt-super-shift-2)
-[focus | foke] (screen | monitor | display) middle: key(alt-super-shift-1)
-[focus | foke] (screen | monitor | display) right: key(alt-super-shift-3)
-[focus | foke] (screen | monitor | display) TV: key(alt-super-shift-4)
+[focus | foke] (screen | monitor | display) (left | one): key(alt-super-shift-2)
+[focus | foke] (screen | monitor | display) (middle | two): key(alt-super-shift-1)
+[focus | foke] (screen | monitor | display) (right | three): key(alt-super-shift-3)
+[focus | foke] (screen | monitor | display) (TV | four): key(alt-super-shift-4)
 
 tile (new | increment): key(alt-super-shift-y)
 tile (delete | close | decrement): key(alt-super-shift-y)

@@ -3,6 +3,7 @@ app: code
 -
 
 collapse [files | folders | explorer]: user.vscode("workbench.files.action.collapseExplorerFolders")
+reveal [file] [in] [explorer]: user.vscode("workbench.files.action.showActiveFileInExplorer")
 
 comment [line]: user.vscode("editor.action.commentLine")
 
@@ -73,7 +74,9 @@ close (other [files] | others): user.vscode("workbench.action.closeOtherEditors"
 increment [selection]: user.vscode("extension.incrementSelection")
 
 [go [to]] definition: user.vscode("editor.action.revealDefinition")
+[go [to]] definition [to | on] [the] side: user.vscode("editor.action.revealDefinitionAside")
 peek definition: user.vscode("editor.action.peekDefinition")
+
 [go [to]] type definition: user.vscode("editor.action.revealTypeDefinition")
 peek type definition: user.vscode("editor.action.peekTypeDefinition")
 
