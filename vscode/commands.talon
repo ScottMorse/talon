@@ -7,7 +7,7 @@ reveal [file] [in] [explorer]: user.vscode("workbench.files.action.showActiveFil
 
 comment [line]: user.vscode("editor.action.commentLine")
 
-save: user.vscode("workbench.action.files.save")
+save: user.vscode("workbench.actio0n.files.save")
 copy: user.vscode("editor.action.clipboardCopyAction")
 cut: user.vscode("editor.action.clipboardCutAction")
 paste: user.vscode("editor.action.clipboardPasteAction")
@@ -54,11 +54,12 @@ all: user.vscode("editor.action.changeAll")
 
 [toggle] copilot [toggle]: user.vscode("github.copilot.toggleCopilot") 
 copilot generate: user.vscode("github.copilot.generate") 
-commit suggestion: user.vscode("editor.action.inlineSuggest.commit") 
+fill [suggestion]: user.vscode("editor.action.inlineSuggest.commit") 
+fill word [suggestion]: user.vscode("editor.action.inlineSuggest.acceptNextWord")
 next suggestion: user.vscode("editor.action.inlineSuggest.showNext") 
 (prev | previous) suggestion: user.vscode("editor.action.inlineSuggest.showPrevious") 
-hide suggestion: user.vscode("editor.action.inlineSuggest.hide") 
-trigger suggestion: user.vscode("editor.action.inlineSuggest.trigger") 
+hide (suggestion | suggest): user.vscode("editor.action.inlineSuggest.hide") 
+suggest: user.vscode("editor.action.inlineSuggest.trigger") 
 
 close (other [files] | others): user.vscode("workbench.action.closeOtherEditors") 
 
@@ -84,3 +85,39 @@ peek type definition: user.vscode("editor.action.peekTypeDefinition")
 ((previous | prev) reference | reference [(previous | prev)]): user.vscode("references-view.prev")
 
 call hierarchy: user.vscode("references-view.showCallHierarchy")
+
+hover: user.vscode("editor.action.showHover")
+hover definition: user.vscode("editor.action.showDefinitionPreviewHover")
+
+copilot chat | chat: user.vscode("workbench.panel.chat.view.copilot.focus")
+
+restart ESLint [server]: user.vscode("eslint.restart")
+restart TS [server]: user.vscode("typescript.restartTsServer")
+
+hide: user.vscode("hideSuggestWidget")
+widget: user.vscode("editor.action.triggerSuggest")
+
+split [file | group | editor] [right]: user.vscode("workbench.action.splitEditor")
+split [file | group | editor] left: user.vscode("workbench.action.splitEditorLeft")
+split [file | group | editor] down: user.vscode("workbench.action.splitEditorDown")
+split [file | group | editor] up: user.vscode("workbench.action.splitEditorUp")
+split [file | group | editor] orthogonal: user.vscode("workbench.action.splitEditorOrthogonal")
+
+[move] file [move] group left: user.vscode("workbench.action.moveEditorToLeftGroup")
+[move] file [move] group right: user.vscode("workbench.action.moveEditorToRightGroup")
+[move] file [move] group down: user.vscode("workbench.action.moveEditorToBelowGroup")
+[move] file [move] group up: user.vscode("workbench.action.moveEditorToAboveGroup")
+[move] file [move] group first: user.vscode("workbench.action.moveEditorToFirstGroup")
+[move] file [move] group last: user.vscode("workbench.action.moveEditorToLastGroup")
+[move] file [move] group next: user.vscode("workbench.action.moveEditorToNextGroup")
+[move] file [move] group (prev | previous | back): user.vscode("workbench.action.moveEditorToPreviousGroup")
+
+grow group: user.vscode("workbench.action.increaseViewSize")
+grow group (width | left | right | horizontal | horizon | across): user.vscode("workbench.action.increaseViewWidth")
+grow group (height | up | down | vertical): user.vscode("workbench.action.increaseViewHeight")
+
+shrink group: user.vscode("workbench.action.decreaseViewSize")
+shrink group (width | left | right | horizontal | horizon | across): user.vscode("workbench.action.decreaseViewWidth")
+shrink group (height | up | down | vertical): user.vscode("workbench.action.decreaseViewHeight")
+
+reset groups: user.vscode("workbench.action.evenEditorWidths")

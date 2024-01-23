@@ -31,7 +31,7 @@ shell paste: key(ctrl-shift-v)
 clear input:
     user.clear_shell_input()
 
-clear: 
+clear shell: 
     user.clear_shell_input()
     "clear"
     key(enter)

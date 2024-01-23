@@ -25,7 +25,7 @@ hide [app [window | windows]]: key(super-h)
 
 (close window | window close): key(super-w)
 
-[screen] lock: key(super-ctrl-q)
+lock screen: key(super-ctrl-q)
 
 undo: key(super-z)
 redo: key(super-shift-z)

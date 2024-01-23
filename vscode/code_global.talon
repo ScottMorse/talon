@@ -29,7 +29,10 @@ dot py: ".py"
 
 dot talon: ".talon"
 
-dot jsn: ".json"
+dot json: ".json"
+
+true: "true"
+false: "false"
 
 pipe (separator | separate): " | "
 
@@ -53,5 +56,24 @@ previous [search | result | search result]: key(shift-enter)
     user.insert_delay(phrase)
 
 ^(replace [all | every | multi file] | search (all | every | multi file)) <user.lucky_input>:
-    .vscode("workbench.action.replaceInFiles")
+    user.vscode("workbench.action.replaceInFiles")
     user.insert_lucky_input(user.lucky_input)
+
+^(copilot chat | chat) <user.lucky_input>:
+    user.vscode("workbench.panel.chat.view.copilot.focus")
+    sleep(0.1)
+    edit.select_all()
+    edit.delete()
+    user.insert_lucky_input(user.lucky_input)
+
+last file:
+    user.vscode("workbench.action.quickOpen")
+    sleep(0.1)
+    key(down)
+    key(enter)
+
+last command: 
+    user.vscode("workbench.action.showCommands")
+    sleep(0.1)
+    key(enter)
+
