@@ -3,10 +3,9 @@ os: mac
 
 -
 
-(desktop | win | window | desk | app) (left | back | prev | previous): key(ctrl-left)
-(desktop | win | window | desk | app) (right | next | forward): key(ctrl-right)
-(move (desktop | desk | win | window | app) | (desktop | desk | win | window | app) move): key(ctrl-up)
-# (view all | (view | view all | all) (window | windows | desktop | desktops | apps | app)): key(ctrl-down)
+{user.desktop_alias} (left | back | prev | previous): key(ctrl-left)
+{user.desktop_alias} (right | next | forward): key(ctrl-right)
+move ({user.desktop_alias} | {user.window_alias}): key(ctrl-up)
 
 spotlight: key(super-space)
 
@@ -19,7 +18,7 @@ app window (prev | previous | back | cycle [previous | prev | back]): key(super-
 
 force quit: key(option-super-escape)
 
-hide [app [window | windows]]: key(super-h)
+hide {user.window_alias}: key(super-h)
 
 (full screen | fullscreen): key(super-ctrl-f)
 
@@ -27,7 +26,7 @@ hide [app [window | windows]]: key(super-h)
 
 lock screen: key(super-ctrl-q)
 
-undo: key(super-z)
+(undo | nevermind): key(super-z)
 redo: key(super-shift-z)
 
 copy: key(super-c)

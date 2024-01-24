@@ -51,7 +51,7 @@ previous [search | result | search result]: key(shift-enter)
     user.vscode("actions.find")
     user.insert_delay(phrase)
 
-^search (files | all | multifile) <phrase>:
+^find <phrase>:
     user.vscode("workbench.action.findInFiles")
     user.insert_delay(phrase)
 

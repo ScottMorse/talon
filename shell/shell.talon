@@ -133,6 +133,10 @@ clear shell:
     user.clear_shell_input()
     "git stash pop "
 
+{user.git_command} stash (keep | index | keep index):
+    user.clear_shell_input()
+    "git stash --keep-index"
+
 {user.git_command} pull:
     user.clear_shell_input()
     "git pull "

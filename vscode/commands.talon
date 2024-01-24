@@ -7,7 +7,14 @@ reveal [file] [in] [explorer]: user.vscode("workbench.files.action.showActiveFil
 
 comment [line]: user.vscode("editor.action.commentLine")
 
-save: user.vscode("workbench.actio0n.files.save")
+find: user.vscode("workbench.action.findInFiles")
+
+hide notification: user.vscode("notifications.hideList")
+show notification: user.vscode("notifications.showList")
+accept notification: user.vscode("notification.acceptPrimaryAction")
+clear notification: user.vscode("notifications.clearAll")
+
+save: user.vscode("workbench.action.files.save")
 copy: user.vscode("editor.action.clipboardCopyAction")
 cut: user.vscode("editor.action.clipboardCutAction")
 paste: user.vscode("editor.action.clipboardPasteAction")
@@ -37,7 +44,6 @@ rename [file | dir | directory]: user.vscode("renameFile")
 command: user.vscode("workbench.action.showCommands")
 
 replace (all | multifile): user.vscode("workbench.action.replaceInFiles")
-search (files | all | multifile): user.vscode("workbench.action.findInFiles")
 
 [toggle] shell: user.vscode("workbench.action.terminal.focus") 
 [focus] explorer: user.vscode("workbench.view.explorer")

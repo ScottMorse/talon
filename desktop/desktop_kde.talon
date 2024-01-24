@@ -4,73 +4,81 @@ os: linux
 
 # TODO use lists at least in python for "app | window" etc.
 
-(focus | foke) (left): key(alt-super-left)
-(focus | foke) (right): key(alt-super-right)
-(focus | foke) (prev | previous | back | up): key(super-k)
-(focus | foke) (next | down): key(super-shift-l)
+# Focus window
+{user.focus_alias} [{user.window_alias}] (left): key(alt-super-left)
+{user.focus_alias} [{user.window_alias}] (right): key(alt-super-right)
+{user.focus_alias} [{user.window_alias}] (prev | previous | back | up): key(super-k)
+{user.focus_alias} [{user.window_alias}] (next | down): key(super-shift-l)
 
-[move] (window | app | move) [move] (screen | monitor | display) (left | one): key(super-shift-left)
-[move] (window | app | move) [move] (screen | monitor | display) (middle | two): key(super-shift-up)
-[move] (window | app | move) [move] (screen | monitor | display) (right | three): key(super-shift-right)
-[move] (window | app | move) [move] (screen | monitor | display) (TV | four): key(super-shift-down)
+# Move windows between screens
+{user.window_alias} {user.screen_alias} (left | one): key(super-shift-left)
+{user.window_alias} {user.screen_alias} (middle | two): key(super-shift-up)
+{user.window_alias} {user.screen_alias} (right | three): key(super-shift-right)
+{user.window_alias} {user.screen_alias} (TV | four): key(super-shift-down)
 
-[move] (window | app) [move] (prev | previous | left | up): key(super-shift-O)
-[move] (window | app) [move] (next | right | down): key(super-shift-i)
+# ?
+{user.window_alias} (prev | previous | left | up): key(super-shift-O)
+{user.window_alias} (next | right | down): key(super-shift-i)
 
-[window | app] grow left: key(super-shift-7)
-[window | app] grow down: key(super-shift-8)
-[window | app] grow up: key(super-shift-9)
-[window | app] grow right: key(super-shift--)
-((window | app) close | close (window | app)): key(alt-f4)
+# Resize window
+[{user.window_alias}] grow left: key(super-shift-7)
+[{user.window_alias}] grow down: key(super-shift-8)
+[{user.window_alias}] grow up: key(super-shift-9)
+[{user.window_alias}] grow right: key(super-shift--)
+({user.window_alias} close | close {user.window_alias}): key(alt-f4)
 
-[focus | foke] (screen | monitor | display) (left | one): key(alt-super-shift-2)
-[focus | foke] (screen | monitor | display) (middle | two): key(alt-super-shift-1)
-[focus | foke] (screen | monitor | display) (right | three): key(alt-super-shift-3)
-[focus | foke] (screen | monitor | display) (TV | four): key(alt-super-shift-4)
+# Focus screens
+[{user.focus_alias}] {user.screen_alias} (left | one): key(alt-super-shift-2)
+[{user.focus_alias}] {user.screen_alias} (middle | two): key(alt-super-shift-1)
+[{user.focus_alias}] {user.screen_alias} (right | three): key(alt-super-shift-3)
+[{user.focus_alias}] {user.screen_alias} (TV | four): key(alt-super-shift-4)
 
+# Control kronkite tiles
 tile (new | increment): key(alt-super-shift-y)
 tile (delete | close | decrement): key(alt-super-shift-y)
 [tile] float: key(super-f9)
 tile main: key(alt-super-shift-/)
 
-(desk | desktop) one: key(ctrl-f1)
-(desk | desktop) two: key(ctrl-f2)
-(desk | desktop) three: key(ctrl-f3)
-(desk | desktop) four: key(ctrl-f4)
-(desk | desktop) five: key(ctrl-f5)
-(desk | desktop) six: key(ctrl-f6)
-(desk | desktop) seven: key(ctrl-f7)
-(desk | desktop) (eight | ocho): key(ctrl-f8)
+# Go to virtual desktop
+{user.desktop_alias} one: key(ctrl-f1)
+{user.desktop_alias} two: key(ctrl-f2)
+{user.desktop_alias} three: key(ctrl-f3)
+{user.desktop_alias} four: key(ctrl-f4)
+{user.desktop_alias} five: key(ctrl-f5)
+{user.desktop_alias} six: key(ctrl-f6)
+{user.desktop_alias} seven: key(ctrl-f7)
+{user.desktop_alias} (eight | ocho): key(ctrl-f8)
 
-[move] (window | app) [move] (desk | desktop) one: 
+# Move window between desktops
+{user.window_alias} {user.desktop_alias} one: 
     key(ctrl-f9)
     sleep(0.1)
     key(ctrl-f1)
-[move] (window | app) [move] (desk | desktop) two: 
+{user.window_alias} {user.desktop_alias} two: 
     key(ctrl-f10)
     sleep(0.1)
     key(ctrl-f2)
-[move] (window | app) [move] (desk | desktop) three: 
+{user.window_alias} {user.desktop_alias} three: 
     key(ctrl-f11)
     sleep(0.1)
     key(ctrl-f3)
-[move] (window | app) [move] (desk | desktop) four: 
+{user.window_alias} {user.desktop_alias} four: 
     key(ctrl-f12)
     sleep(0.1)
     key(ctrl-f4)
-[move] (window | app) [move] (desk | desktop) five: 
+{user.window_alias} {user.desktop_alias} five: 
     key(ctrl-f13)
     sleep(0.1)
     key(ctrl-f5)
-[move] (window | app) [move] (desk | desktop) six: 
+{user.window_alias} {user.desktop_alias} six: 
     key(ctrl-f14)
     sleep(0.1)
     key(ctrl-f6)
-[move] (window | app) [move] (desk | desktop) seven: 
+{user.window_alias} {user.desktop_alias} seven: 
     key(ctrl-f15) 
     sleep(0.1)
     key(ctrl-f7)
-[move] (window | app) [move] (desk | desktop) (eight | ocho): 
+{user.window_alias} {user.desktop_alias} (eight | ocho): 
     key(ctrl-f16) 
     sleep(0.1)
     key(ctrl-f8)
@@ -84,10 +92,6 @@ screenshot: key(alt-super-[)
 recon: key(alt-super-shift-r)
 
 veb: key(alt-super-shift-v)
-
-[open] settings: key(super-f21)
-
-(browser | brave): key(super-alt-shift-b)
 
 (undo | nevermind): key(ctrl-z)
 redo: key(ctrl-shift-z)
