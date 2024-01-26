@@ -2,8 +2,6 @@ os: linux
 
 -
 
-# TODO use lists at least in python for "app | window" etc.
-
 # Focus window
 {user.focus_alias} [{user.window_alias}] (left): key(alt-super-left)
 {user.focus_alias} [{user.window_alias}] (right): key(alt-super-right)
