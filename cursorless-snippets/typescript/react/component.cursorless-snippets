@@ -78,6 +78,25 @@
       }
     ]
   },
+  "reactElementNoCHild": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "<$element />"
+        ],
+        "variables": {
+          "element": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
   "jsxElement": {
     "definitions": [
       {
