@@ -78,7 +78,7 @@
       }
     ]
   },
-  "reactElementNoCHild": {
+  "reactElementNoChild": {
     "definitions": [
       {
         "scope": {
