@@ -1,0 +1,73 @@
+{
+  "useState": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "const [${1}, set${1/(.*)/${1:/capitalize}/}] = useState(${initialValue})"
+        ]
+      }
+    ]
+  },
+  "useEffect": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "useEffect(() => {",
+          "  ${body}",
+          "}, [${dependencies}])"
+        ]
+      }
+    ]
+  },
+  "useEffectCleanup": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "useEffect(() => {",
+          "  ${body}",
+          "",
+          "  return () => {",
+          "    ${cleanup}",
+          "  }",
+          "}, [${dependencies}])"
+        ]
+      }
+    ]
+  },
+  "useCallback": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "const ${name} = useCallback((${args}) => {",
+          "  ${body}",
+          "}, [${dependencies}])"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

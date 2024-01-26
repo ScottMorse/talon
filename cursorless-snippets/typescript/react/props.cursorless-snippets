@@ -1,0 +1,82 @@
+{
+  "prop": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "$key=$value"
+        ],
+        "variables": {
+          "key": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "stringProp": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "$key=\"$value\""
+        ],
+        "variables": {
+          "key": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "dynamicProp": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "$key={$value}"
+        ],
+        "variables": {
+          "key": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "dataProp": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "data-$key={$value}"
+        ],
+        "variables": {
+          "key": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

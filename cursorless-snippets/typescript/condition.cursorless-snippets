@@ -1,0 +1,24 @@
+{
+  "ternaryStatement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "$condition ? $value : $value2"
+        ],
+        "variables": {
+          "condition": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

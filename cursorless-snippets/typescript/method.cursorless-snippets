@@ -1,0 +1,49 @@
+{
+  "callMethod": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          ".${name}($args)"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "wrapCallMethod": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "${object}.${name}($args)"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          },
+          "object": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

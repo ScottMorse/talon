@@ -19,7 +19,7 @@ go (bottom | end):
 (recent | recents):
     key(tab:6)
 
-dot tsx: ".tsx"
+dot TSX: ".tsx"
 
 dot ts: ".ts"
 

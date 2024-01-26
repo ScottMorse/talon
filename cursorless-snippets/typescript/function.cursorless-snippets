@@ -1,0 +1,78 @@
+{
+  "arrowFunction": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "const $name = ($parameterList) => {",
+          "\t$body",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "arrowFunctionWithOptions": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "interface ${optionsType}Options {",
+          "\t$optionsFields",
+          "}",
+          "",
+          "const $name = ({",
+          "  $optionsFields ",
+          "}: ${optionsType}Options) => {",
+          "\t$body",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "returnStatement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "return ${value}"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

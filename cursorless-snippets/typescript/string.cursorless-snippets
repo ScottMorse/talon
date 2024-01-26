@@ -1,0 +1,24 @@
+{
+  "templateLiteral": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "`${$value}`"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

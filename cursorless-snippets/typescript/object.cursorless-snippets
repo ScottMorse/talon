@@ -1,0 +1,26 @@
+{
+  "objectLiteral": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "{",
+          "\t$value",
+          "}"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

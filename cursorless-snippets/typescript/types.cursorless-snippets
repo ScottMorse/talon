@@ -1,0 +1,106 @@
+{
+  "type": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "type ${name} = ${type}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "interface": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "interface ${name} {",
+          "  $type",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "extendedInterface": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "interface ${name} extends ${value} {",
+          "  $type",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "arrayType": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "${value}[]"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "primitiveArrayType": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "${value}[]"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

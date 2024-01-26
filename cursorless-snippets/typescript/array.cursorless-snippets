@@ -1,0 +1,43 @@
+{
+  "arrayLiteral": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "javascript",
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "[",
+          "  $items",
+          "]"
+        ]
+      }
+    ]
+  },
+  "typedArray": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "const $name: $type[] = [",
+          "  $items",
+          "]"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

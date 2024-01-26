@@ -1,0 +1,68 @@
+{
+  "exportStatement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "export ${value}"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "importStatement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "import {${value}} from '${path}'"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "importDefaultStatement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "import ${value} from '${path}'"
+        ],
+        "variables": {
+          "value": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  }
+}

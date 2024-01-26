@@ -1,0 +1,102 @@
+{
+  "reactComponent": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "export interface ${name}Props {",
+          "\t$props",
+          "}",
+          "",
+          "export const $name = ({",
+          "\t$props",
+          "}: ${name}Props) => {",
+          "\t$body",
+          "\treturn (",
+          "\t\t<$element>",
+          "\t\t\t  ",
+          "\t\t</$element>",
+          "\t)",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "reactComponentNoProps": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "export const $name = () => {",
+          "\t$body",
+          "\treturn (",
+          "\t\t<$element>",
+          "\t\t\t  $innerElement",
+          "\t\t</$element>",
+          "\t)",
+          "}"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "reactElement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "<$element>",
+          "\t$body",
+          "</$element>"
+        ],
+        "variables": {
+          "element": {
+            "formatter": "pascalCase"
+          }
+        }
+      }
+    ]
+  },
+  "jsxElement": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "<$element>",
+          "\t$body",
+          "</$element>"
+        ],
+        "variables": {
+          "element": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}

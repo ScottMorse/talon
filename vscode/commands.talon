@@ -9,10 +9,10 @@ comment [line]: user.vscode("editor.action.commentLine")
 
 find: user.vscode("workbench.action.findInFiles")
 
-hide notification: user.vscode("notifications.hideList")
-show notification: user.vscode("notifications.showList")
-accept notification: user.vscode("notification.acceptPrimaryAction")
-clear notification: user.vscode("notifications.clearAll")
+hide notification | notification hide: user.vscode("notifications.hideList")
+show notification | notification show: user.vscode("notifications.showList")
+accept notification | notification accept: user.vscode("notification.acceptPrimaryAction")
+(clear | close) notification | notification (clear | close): user.vscode("notifications.clearAll")
 
 save: user.vscode("workbench.action.files.save")
 copy: user.vscode("editor.action.clipboardCopyAction")

@@ -1,0 +1,150 @@
+{
+  "constant": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "const $name = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "destructuredConstant": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "const { $field } = $name"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "typedConstant": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "const $name: $type = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "topConstant": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "const $name = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "upperSnakeCase"
+          }
+        }
+      }
+    ]
+  },
+  "typedTopConstant": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "const $name: $type = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "upperSnakeCase"
+          }
+        }
+      }
+    ]
+  },
+  "let": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "let $name = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  },
+  "typedLet": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "let $name: $type = $value"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}
