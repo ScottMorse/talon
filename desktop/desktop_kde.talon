@@ -21,7 +21,7 @@ os: linux
 # Resize window
 [{user.window_alias}] grow left: key(super-shift-7)
 [{user.window_alias}] grow down: key(super-shift-8)
-[{user.window_alias}] grow up: key(super-shift-9)v
+[{user.window_alias}] grow up: key(super-shift-9)
 [{user.window_alias}] grow right: key(super-shift--)
 ({user.window_alias} close | close {user.window_alias}): key(alt-f4)
 
