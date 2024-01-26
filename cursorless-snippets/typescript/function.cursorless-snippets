@@ -23,6 +23,25 @@
       }
     ]
   },
+  "anonymousFunction": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "typescript",
+            "typescriptreact",
+            "javascript",
+            "javascriptreact"
+          ]
+        },
+        "body": [
+          "($args) => {",
+          "\t$body",
+          "}"
+        ]
+      }
+    ]
+  },
   "arrowFunctionWithOptions": {
     "definitions": [
       {
