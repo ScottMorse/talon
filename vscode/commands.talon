@@ -82,12 +82,12 @@ close (other [files] | others): user.vscode("workbench.action.closeOtherEditors"
 
 increment [selection]: user.vscode("extension.incrementSelection")
 
-[go [to]] definition: user.vscode("editor.action.revealDefinition")
-[go [to]] definition [to | on] [the] side: user.vscode("editor.action.revealDefinitionAside")
-peek definition: user.vscode("editor.action.peekDefinition")
+[go [to]] (definition | define): user.vscode("editor.action.revealDefinition")
+[go [to]] (definition | define) [to | on] [the] side: user.vscode("editor.action.revealDefinitionAside")
+peek (definition | define): user.vscode("editor.action.peekDefinition")
 
-[go [to]] type definition: user.vscode("editor.action.revealTypeDefinition")
-peek type definition: user.vscode("editor.action.peekTypeDefinition")
+([go [to]] type definition | define type): user.vscode("editor.action.revealTypeDefinition")
+peek (type definition | define type): user.vscode("editor.action.peekTypeDefinition")
 
 (next reference | reference [next]): user.vscode("references-view.next")
 ((previous | prev) reference | reference [(previous | prev)]): user.vscode("references-view.prev")
@@ -120,12 +120,29 @@ split [file | group | editor] orthogonal: user.vscode("workbench.action.splitEdi
 [move] file [move] group next: user.vscode("workbench.action.moveEditorToNextGroup")
 [move] file [move] group (prev | previous | back): user.vscode("workbench.action.moveEditorToPreviousGroup")
 
-grow group: user.vscode("workbench.action.increaseViewSize")
-grow group (width | left | right | horizontal | horizon | across): user.vscode("workbench.action.increaseViewWidth")
-grow group (height | up | down | vertical): user.vscode("workbench.action.increaseViewHeight")
+grow group all: user.vscode("workbench.action.increaseViewSize")
+grow group: user.vscode("workbench.action.increaseViewWidth")
+grow group (height | down | vertical): user.vscode("workbench.action.increaseViewHeight")
 
-shrink group: user.vscode("workbench.action.decreaseViewSize")
-shrink group (width | left | right | horizontal | horizon | across): user.vscode("workbench.action.decreaseViewWidth")
-shrink group (height | up | down | vertical): user.vscode("workbench.action.decreaseViewHeight")
+shrink group all: user.vscode("workbench.action.decreaseViewSize")
+shrink group: user.vscode("workbench.action.decreaseViewWidth")
+shrink group (height | down | vertical): user.vscode("workbench.action.decreaseViewHeight")
 
 reset groups: user.vscode("workbench.action.evenEditorWidths")
+
+(cursor [less | list] | cursorless) reset: user.vscode("cursorless.recomputeDecorationStyles")
+
+(keybindings | [keyboard] shortcuts): user.vscode("workbench.action.openGlobalKeybindings")
+
+[markdown] [open] preview: user.vscode("markdown.showPreviewToSide")
+
+refactor: user.vscode("editor.action.refactor")
+preview refactor | refactor preview: user.vscode("refactorPreview")
+refactor (take | apply | accept) | refactor (take | apply | accept): user.vscode("refactorPreview.apply")
+focus refactor | refactor focus: user.vscode("refactorPreview.focus")
+refactor discard | discard refactor: user.vscode("refactorPreview.discard")
+refactor group [by] file: user.vscode("refactorPreview.groupByFile")
+refactor group [by] type: user.vscode("refactorPreview.groupByType")
+refactor toggle group: user.vscode("refactorPreview.toggleGrouping")
+refactor reset container: user.vscode("refactorPreview.resetViewContainerLocation")
+refactor reset: user.vscode("refactorPreview.resetViewLocation")

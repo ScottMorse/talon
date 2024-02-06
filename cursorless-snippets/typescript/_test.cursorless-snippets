@@ -1,0 +1,24 @@
+{
+  "useStateTest": {
+    "definitions": [
+      {
+        "scope": {
+          "langIds": [
+            "javascript",
+            "javascriptreact",
+            "typescript",
+            "typescriptreact"
+          ]
+        },
+        "body": [
+          "const [${name}, set${name/(.*)/${1:/capitalize}/}] = useState(${initialValue})"
+        ],
+        "variables": {
+          "name": {
+            "formatter": "camelCase"
+          }
+        }
+      }
+    ]
+  }
+}
