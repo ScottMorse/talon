@@ -8,28 +8,12 @@ os: linux
 {user.focus_alias} [{user.window_alias}] (prev | previous | back | up): key(super-k)
 {user.focus_alias} [{user.window_alias}] (next | down): key(super-shift-l)
 
-# Move windows between screens
-{user.window_alias} {user.screen_alias} (left | one): key(super-shift-left)
-{user.window_alias} {user.screen_alias} (middle | two): key(super-shift-up)
-{user.window_alias} {user.screen_alias} (right | three): key(super-shift-right)
-{user.window_alias} {user.screen_alias} (TV | four): key(super-shift-down)
-
-# ?
-{user.window_alias} (prev | previous | left | up): key(super-shift-O)
-{user.window_alias} (next | right | down): key(super-shift-i)
-
 # Resize window
 [{user.window_alias}] grow left: key(super-shift-7)
 [{user.window_alias}] grow down: key(super-shift-8)
-[{user.window_alias}] grow up: key(super-shift-9)
+[{user.window_alias}] g&row up: key(super-shift-9)
 [{user.window_alias}] grow right: key(super-shift--)
 ({user.window_alias} close | close {user.window_alias}): key(alt-f4)
-
-# Focus screens
-[{user.focus_alias}] {user.screen_alias} (left | one): key(alt-super-shift-2)
-[{user.focus_alias}] {user.screen_alias} (middle | two): key(alt-super-shift-1)
-[{user.focus_alias}] {user.screen_alias} (right | three): key(alt-super-shift-3)
-[{user.focus_alias}] {user.screen_alias} (TV | four): key(alt-super-shift-4)
 
 # Control kronkite tiles
 tile (new | increment): key(alt-super-shift-y)
@@ -37,51 +21,16 @@ tile (delete | close | decrement): key(alt-super-shift-y)
 [tile] float: key(super-f9)
 tile main: key(alt-super-shift-/)
 
-# Go to virtual desktop
-{user.desktop_alias} one: key(ctrl-f1)
-{user.desktop_alias} two: key(ctrl-f2)
-{user.desktop_alias} three: key(ctrl-f3)
-{user.desktop_alias} four: key(ctrl-f4)
-{user.desktop_alias} five: key(ctrl-f5)
-{user.desktop_alias} six: key(ctrl-f6)
-{user.desktop_alias} seven: key(ctrl-f7)
-{user.desktop_alias} (eight | ocho): key(ctrl-f8)
+[toggle] (max | maximize): user.toggle_maximize()
 
-# Move window between desktops
-{user.window_alias} {user.desktop_alias} one: 
-    key(ctrl-f9)
-    sleep(0.1)
-    key(ctrl-f1)
-{user.window_alias} {user.desktop_alias} two: 
-    key(ctrl-f10)
-    sleep(0.1)
-    key(ctrl-f2)
-{user.window_alias} {user.desktop_alias} three: 
-    key(ctrl-f11)
-    sleep(0.1)
-    key(ctrl-f3)
-{user.window_alias} {user.desktop_alias} four: 
-    key(ctrl-f12)
-    sleep(0.1)
-    key(ctrl-f4)
-{user.window_alias} {user.desktop_alias} five: 
-    key(ctrl-f13)
-    sleep(0.1)
-    key(ctrl-f5)
-{user.window_alias} {user.desktop_alias} six: 
-    key(ctrl-f14)
-    sleep(0.1)
-    key(ctrl-f6)
-{user.window_alias} {user.desktop_alias} seven: 
-    key(ctrl-f15) 
-    sleep(0.1)
-    key(ctrl-f7)
-{user.window_alias} {user.desktop_alias} (eight | ocho): 
-    key(ctrl-f16) 
-    sleep(0.1)
-    key(ctrl-f8)
+[{user.focus_alias}] <user.screen_specifier_full>: user.focus_screen(user.screen_specifier_full)
+{user.window_alias} <user.screen_specifier_full>: user.send_to_screen(user.screen_specifier_full)
 
-terminal: key(super-5)
+<user.workspace_specifier>: user.focus_workspace(user.workspace_specifier)
+<user.workspace_specifier> <user.screen_specifier>: user.focus_workspace(user.workspace_specifier, user.screen_specifier)
+
+{user.window_alias} <user.workspace_specifier>: user.send_to_workspace(user.workspace_specifier)
+{user.window_alias} <user.workspace_specifier> <user.screen_specifier>: user.send_to_workspace(user.workspace_specifier, user.screen_specifier)
 
 emoji: key(super-.)
 

@@ -146,3 +146,5 @@ refactor group [by] type: user.vscode("refactorPreview.groupByType")
 refactor toggle group: user.vscode("refactorPreview.toggleGrouping")
 refactor reset container: user.vscode("refactorPreview.resetViewContainerLocation")
 refactor reset: user.vscode("refactorPreview.resetViewLocation")
+
+close (project | workspace): user.vscode("workbench.action.closeFolder")

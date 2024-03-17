@@ -14,4 +14,13 @@ define_list("window_alias", ["win", "window", "app"])
 
 define_list("screen_alias", ["screen", "monitor", "display"])
 
-define_list("desktop_alias", ["desk", "desktop", "virtual desk", "virtual desktop"])
+DESKTOP_ALIASES = [
+    "desk",
+    "desktop",
+    "virtual desk",
+    "virtual desktop",
+    "v desk",
+    "v desktop",
+]
+
+define_list("desktop_alias", DESKTOP_ALIASES)

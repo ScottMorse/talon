@@ -1,7 +1,9 @@
 
 (fuck | shit)+: ""
 
-(oh)+ [my] [shit | fuck | yeah | yes | no]+: ""
+fuck this [shit]: ""
+
+(oh)+ [my] [shit | fuck | yeah | yes | no | god]+: ""
 
 [you] [fucking]+ motherfucker: ""
 
@@ -9,7 +11,7 @@
 
 why [is it like this | would you do [that | it that way]]: ""
 
-[gaw | cut] (dam | dang) [it]: ""
+[gaw | god | cut] (dam | dang) [it]: ""
 
 shit [on my [fucking] biscuits]: ""
 
@@ -30,3 +32,5 @@ wow: ""
 well i guess I'm [just] [fucking] screwed [then]: ""
 
 oh [fucking] well: ""
+
+damn [dude]: ""

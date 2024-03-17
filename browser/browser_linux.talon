@@ -10,7 +10,7 @@ os: linux
 (dev [tools] [html | inspect | elements] | (html | inspect | elements)): key(ctrl-shift-c)
 dev [tools] (prev | memory | mem | store | stored): key(ctrl-shift-i)
 
-search: key(super-f)
+search: key(ctrl-f)
 
 ^(search | take) <user.lucky_input> new tab:
     key(ctrl-f)
